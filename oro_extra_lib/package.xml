@@ -1,0 +1,27 @@
+<package>
+  <name>oro_extra_lib</name>
+  <version>1.0.0</version>
+  <description>This package contains various stuff to help orocos development</description>
+  <maintainer email="unknown@maintainer.com">Unknown Author</maintainer>
+
+  <license>Unknown</license>
+
+  <url type="website"></url>
+  <!-- <url type="bugtracker"></url> -->
+
+  <author>Unknown Author</author>
+
+  <build_depend>rtt</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>orogen</build_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <build_depend>roslib</build_depend>
+
+  <build_depend>cmake_modules</build_depend>
+
+  <run_depend>  roscpp</run_depend>
+ 
+</package>
+
