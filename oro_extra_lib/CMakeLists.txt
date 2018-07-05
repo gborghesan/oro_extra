@@ -38,10 +38,7 @@ include_directories(
 # that it can pick up all above settings.
 #
 
-catkin_package(
-    INCLUDE_DIRS include
-	LIBRARIES rtt_period_counter
-    )
+
 
 file(GLOB_RECURSE EXTRA_FILES
     package.xml
@@ -53,8 +50,13 @@ file(GLOB_RECURSE EXTRA_FILES
     *.launch)
 add_custom_target(${PROJECT_NAME}_OTHER_FILES  ${PROJECT_SOURCE_DIR} SOURCES ${EXTRA_FILES})
 
-add_library(rtt_period_counter
+orocos_library(rtt_period_counter
     src/rtt_period_counter.cpp
     )
 
-#orocos_generate_package()
+orocos_generate_package(  
+  INCLUDE_DIRS include
+	LIBRARY rtt_period_counter
+)
+
+
