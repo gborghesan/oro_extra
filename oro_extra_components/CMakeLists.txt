@@ -36,6 +36,8 @@ include_directories(
                 include
 )
 
+catkin_add_env_hooks( 20.oro_extra_components SHELLS sh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env_hooks)
+
 add_subdirectory(src-cmp)
 add_subdirectory(test)
 #
