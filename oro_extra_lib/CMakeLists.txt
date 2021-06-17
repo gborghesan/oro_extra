@@ -54,6 +54,8 @@ orocos_library(rtt_period_counter
     src/rtt_period_counter.cpp
     )
 
+catkin_add_env_hooks( 20.oro_extra_lib SHELLS sh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env_hooks)
+
 orocos_generate_package(  
   INCLUDE_DIRS include
 	LIBRARY rtt_period_counter
