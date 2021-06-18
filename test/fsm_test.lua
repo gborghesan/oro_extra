@@ -23,7 +23,7 @@ ros = gs:provides("ros")
 ros:import("rtt_rospack")
 ros:import("rtt_std_msgs")
 
-base_dir = ros:find("oro_extra_components")
+base_dir = ros:find("oro_extra")
 
 depl:loadComponent("fsm_comp", "OCL::LuaComponent")
 fsm_comp = depl:getPeer("fsm_comp")

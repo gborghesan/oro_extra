@@ -1,5 +1,5 @@
 <package>
-  <name>oro_extra_components</name>
+  <name>oro_extra</name>
   <version>1.0.0</version>
   <description>This package contains various stuff to help orocos development</description>
   <maintainer email="unknown@maintainer.com">Unknown Author</maintainer>
@@ -26,7 +26,10 @@
   <build_depend>rtt_std_msgs</build_depend>
   <run_depend>  rtt_std_msgs</run_depend>
   <run_depend>  std_msgs</run_depend>
-
+  <export>
+    <cpp cflags="-I${prefix}/include" />
+    <cpp lflags="-L${prefix}/lib -lrtt_period_counter" />
+  </export>
 
 </package>
 

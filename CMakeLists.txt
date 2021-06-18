@@ -8,7 +8,7 @@ cmake_minimum_required(VERSION 2.6.3)
 # This creates a standard cmake project. You may extend this file with
 # any cmake macro you see fit.
 #
-project(oro_extra_lib)
+project(oro_extra)
 
 add_definitions(-std=c++11 -fPIC)
 
@@ -39,22 +39,24 @@ include_directories(
 #
 
 
-
+# for seeing files in qtcreator
 file(GLOB_RECURSE EXTRA_FILES
     package.xml
     *.ops
     *.lua
     *.py
-	include/oro_extra_lib/*
+	include/oro_extra/*
     *.md
     *.launch)
 add_custom_target(${PROJECT_NAME}_OTHER_FILES  ${PROJECT_SOURCE_DIR} SOURCES ${EXTRA_FILES})
+# end qtcreator
 
-orocos_library(rtt_period_counter
-    src/rtt_period_counter.cpp
-    )
+add_subdirectory(test)
+add_subdirectory(src-cmp)
+add_subdirectory(src)
 
-catkin_add_env_hooks( 20.oro_extra_lib SHELLS sh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env_hooks)
+
+catkin_add_env_hooks( 20.oro_extra SHELLS sh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env_hooks)
 
 orocos_generate_package(  
   INCLUDE_DIRS include

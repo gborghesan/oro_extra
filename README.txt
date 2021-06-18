@@ -1,7 +1,12 @@
+
+
+
+
+
 how to make a orocos library
 ======
 
-in the cmake whre the lib is
+in the cmake where the lib is
 
 ```
 orocos_library(rtt_period_counter
@@ -18,9 +23,9 @@ orocos_generate_package(
 
 in the package where the lib is imported
 ```
-find_package(oro_extra_lib)
+find_package(oro_extra)
 ...
-target_link_libraries(oct_average
+target_link_libraries(my_exec_name
   name_of_the_component
   ${catkin_LIBRARIES}
   )

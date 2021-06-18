@@ -1,4 +1,4 @@
-#include "oro_extra_lib/rtt_period_counter.h"
+#include "oro_extra/rtt_period_counter.h"
 #include <numeric>
 namespace RTT {
 PeriodCounter::PeriodCounter(TaskContext* tc,
