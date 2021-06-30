@@ -47,7 +47,7 @@ local fqn_out, events_in
 state_port = rtt.OutputPort("std_msgs.String", "state_port")
 tc:addPort(state_port)
 events_in = rtt.InputPort("string")
-tc:addEventPort(events_in, "events_in", "rFSM event input port")
+tc:addEventPort(events_in, "events", "rFSM event input port")
 
 state_machine_prop=rtt.Property("string","state_machine","file with state machine to execute")
 tc:addProperty(state_machine_prop)
