@@ -63,4 +63,16 @@ orocos_generate_package(
 	LIBRARY rtt_period_counter
 )
 
+file(GLOB_RECURSE LUA_FILES "*.lua")
+file(GLOB_RECURSE SO_FILES "*.so")
+install(
+  FILES ${LUA_FILES}
+  DESTINATION ${CATKIN_GLOBAL_SHARE_DESTINATION}/lua/5.1/rttlua_completion/
+)
+
+install(
+  TARGETS readline
+  DESTINATION ${CATKIN_GLOBAL_SHARE_DESTINATION}/lua/5.1/rttlua_completion/
+)
+
 
